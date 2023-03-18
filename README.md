@@ -31,7 +31,7 @@
 
 [![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=junhyung031115)](https://solved.ac/junhyung031115)
 
-<a href="https://github.com/DogJHDOG"> <img align="top" style="height:168px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DogJHDOG&layout=compact"><br><br><img src="http://mazandi.herokuapp.com/api?handle=junhyung031115&theme=warm"/> </a> 
+<img src="http://mazandi.herokuapp.com/api?handle=junhyung031115&theme=warm"/> <a href="https://github.com/DogJHDOG"> <img align="top" style="height:168px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DogJHDOG&layout=compact"><br><br> </a>
 
 
 </div>
