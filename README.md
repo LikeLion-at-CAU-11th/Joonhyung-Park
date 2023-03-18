@@ -10,8 +10,8 @@
 
 ### 구구/ 박준형's Profile
 
- Junhyung Park(박준형)
- ChunngAng Univ. CSE 22.03 ~
+Junhyung Park(박준형)  
+ChunngAng Univ. CSE 22.03 ~
  
 
  [![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=junhyung031115)](https://solved.ac/junhyung031115)
