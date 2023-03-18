@@ -12,7 +12,7 @@
 
 ## 기술 스택    
 
-Language
+<H3 Language 
 
 <img src="https://img.shields.io/badge/Java-007396?style=flat&logo=Java&logoColor=white" />
 <img src="https://img.shields.io/badge/C-A8B9CC?style=flat&logo=C&logoColor=white" />
@@ -31,8 +31,7 @@ Profile
 
 [![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=junhyung031115)](https://solved.ac/junhyung031115)
 
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DogJHDOG&layout=compact"><br><br>
+<img src="http://mazandi.herokuapp.com/api?handle=junhyung031115&theme=warm"/>  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DogJHDOG&layout=compact"><br><br>
 
 
 </div>
