@@ -8,6 +8,9 @@
 
 </div>
 
+### 구구/ 박준형
+
+
 <div align ="center">
 
 ## 기술 스택    
