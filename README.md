@@ -16,6 +16,8 @@ ChunngAng Univ.CSE (22.03 ~ )
 ### Activity 
 UMC ChungAng - 3rd Android (22.09 ~ 23.02)  
 LikeLion at CAU - 11th Frontend (23.03 ~ )  
+
+
 [![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=junhyung031115)](https://solved.ac/junhyung031115)
 
 
