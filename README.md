@@ -8,13 +8,22 @@
 
 </div>
 
-<div align ="center>
+<div align ="center">
 
-## 기술 스택 
+## 기술 스택    
+
+ Language
+
+ 	<img src="https://img.shields.io/badge/Java-007396?style=flat&logo=Java&logoColor=white" />
+ 	<img src="https://img.shields.io/badge/C-007396?style=flat&logo=C&logoColor=white" />
+
+
+
 
 </div>
 
 
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=DogJHDOG&layout=compact"><br><br>
 [![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=junhyung031115)](https://solved.ac/junhyung031115)
 
 
