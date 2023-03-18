@@ -11,11 +11,10 @@
 <div align ="center>
 
 ## 기술 스택 
-
+[![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj={junhyung031115})](https://solved.ac/{junhyung031115})
 
 </div>
 
-[![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj={junhyung031115})](https://solved.ac/{junhyung031115})
 
 
 <img src="https://img.shields.io/badge/C-#A8B9CC?style=flat&logo=C&logoColor=white"/>
