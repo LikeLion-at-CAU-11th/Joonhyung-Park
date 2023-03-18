@@ -25,6 +25,7 @@ Tools
 <img src="https://img.shields.io/badge/CLion-8D5A9E?style=flat&logo=CLion&logoColor=white" />
 <img src="https://img.shields.io/badge/Visual Studio-5C2D91?style=flat&logo=Visual Studio&logoColor=white" />
 <img src="https://img.shields.io/badge/VScode-007ACC?style=flat&logo=Visual Studio Code&logoColor=white" />
+<img src="https://img.shields.io/badge/Android Studio-3DDC84?style=flat&logo=Android Studio&logoColor=white" />
 
 
 </div>
