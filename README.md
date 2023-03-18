@@ -8,7 +8,14 @@
 
 </div>
 
-### 구구/ 박준형
+### 구구/ 박준형's Profile
+
+ Junhyung Park(박준형)
+ ChunngAng Univ. CSE 22.03 ~
+ 
+
+ [![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=junhyung031115)](https://solved.ac/junhyung031115)
+
 
 
 <div align ="center">
@@ -30,9 +37,6 @@
 <img src="https://img.shields.io/badge/VScode-007ACC?style=flat&logo=Visual Studio Code&logoColor=white" />
 <img src="https://img.shields.io/badge/Android Studio-3DDC84?style=flat&logo=Android Studio&logoColor=white" />
 
-**Profile**
-
-[![Solved.ac프로필](http://mazassumnida.wtf/api/mini/generate_badge?boj=junhyung031115)](https://solved.ac/junhyung031115)
 
 <img src="http://mazandi.herokuapp.com/api?handle=junhyung031115&theme=warm"/> <a href="https://github.com/DogJHDOG"> <img align="top" style="height:168px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=DogJHDOG&layout=compact"><br><br> </a>
 
