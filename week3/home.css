@@ -1,13 +1,40 @@
 
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #2d2a38;
+}
+
+.title {
+    text-align: 1eft;
+    margin-left: 200px;
+    color : white
+}
 
 .ms_list {
     float: left;
+    text-decoration-color: white;
     background-color: white;
     width: 600px;
     height: auto;
     border: 1px solid black;
     border-radius: 15px;
     margin:auto;
+
+}
+.dif_list {
+    background-color: white;
+
+}
+
+.ms_background_img {
+
+    background-color: white;
+    width: 700px;
+    height: 700px;
+    margin-left: 200px;
+    float: left;
+    border-radius: 15px;
+
 
 }
 
@@ -18,11 +45,16 @@
     background-color: whitesmoke;
     border: 1px solid whitesmoke;
     margin-bottom: 10px;
+}
 
+.front_title {
+
+    background-color: whitesmoke;
 
 }
 
 .front_img {
+    background-color: whitesmoke;
     width: 100px;
     height: 100px;
     float: left;
@@ -31,8 +63,10 @@
 
 .front_message {
 
+    background-color: whitesmoke;
     float: left;
     padding: 5px 0px 30px 30px;
 
 
 }
+

@@ -13,7 +13,9 @@
 
 <body>
     
+
     
+
     <div class = "title">
     
         <h2>9u9u's</h2>
@@ -23,28 +25,28 @@
 
     <div  class = "ms_list">
 
-        <p style="text-align:center" >2022년 3월 24일 20:53 기준</p>
+        <p style="text-align:center; background-color: white;" >2022년 3월 24일 20:53 기준</p>
 
-        <ol>
+        <ol style="background-color: white;">
 
-            <li>
+            <li class = "dif_list">
                 <div class ="front_click" onclick="window.open('week3_Betelgeouse.html')" >
 
                     <img class="front_img" src="betelgeuse_front.jpg" >
                     <div class ="front_message">
-                        <p>BETELGEUSE</p>
+                        <p class = "front_title">BETELGEUSE</p>
                         Yuuri - 2023.03.13
                     </div>
 
                 </div>
             </li>
 
-            <li>
-                <div class ="front_click">
+            <li class = "dif_list">
+                <div class ="front_click" onclick ="toggleImg();">
 
                     <img class="front_img" src="betelgeuse_front.jpg"  >
                     <div class ="front_message">
-                        <p>Peter Pan</p>
+                        <p class = "front_title">Peter Pan</p>
                         Yuuri - 2023.03.15
                     </div>
 
@@ -52,11 +54,11 @@
 
             </li>
             
-            <li>
+            <li class = "dif_list">
                 <div class ="front_click">
                     <img class="front_img" src="betelgeuse_front.jpg"  >
                     <div class ="front_message">
-                        <p>Never Not</p>
+                        <p class = "front_title">Never Not</p>
                         Lauv - 2023.03.01
                     </div>
                 </div>
@@ -65,6 +67,10 @@
         </ol>
 
     </div>
+
+
+    <img id="background_img"class = "ms_background_img"src="betelgeuse_front.jpg">
+
 
 
 </body>
