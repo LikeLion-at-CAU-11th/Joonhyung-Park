@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Delicious Handrawn';
+    font-size: 30px;
+}
+
+
+/* flex 요소를 첨가하는 부분 */
+.row{
+
+    display:flex;
+
+}
+
+.column{
+
+    display:flex;
+    flex-direction: column;
+
+}
+
+
+#content-wrapper{
+
+    
+    width: 500px;
+    height: 500px;
+    border: 5px black solid;
+    border-radius: 20px;
+    
+
+
+}
+
+.score-section{
+
+    justify-content: space-evenly;
+    flex-basis: 15%;
+
+}
+
+.display-section{
+    justify-content: space-evenly;
+    flex-basis: 60%;
+
+}
+
+.button-section{
+    justify-content: center;
+    flex-basis: 25%;
+
+}
+
+.icon-container{
+
+    font-size : 80px;
+
+    text-align: center;
+
+    width: 100%;
+    height: 80px;
+
+}
+
+#button{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+    border: 4px black solid;
+
+    font-size: 60px;
+}
+
+#reset-button{
+
+    font-size:15px;
+    border:2px black soild;
+    border-radius: 50%;
+    text-align: center;
+
+    padding: 3px;
+    background-color: black;
+    color: white;
+
+}
+.my-hand-text{
+
+    width: 100%;
+    height: 80px;
+    text-align: center;
+
+}
+
+.computer-hand-text{
+
+    width: 100%;
+    height: 80px;
+    text-align: center;
+
+}
+
+button{
+
+    all:unset;
+
+}
+
+.display-section{
+
+    justify-content: space-evenly;
+    height : 80%;
+
+}
+
+
+
