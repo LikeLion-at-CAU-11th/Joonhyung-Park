@@ -59,7 +59,6 @@ body{
 .button-section{
     justify-content: center;
     flex-basis: 25%;
-
 }
 
 .icon-container{
@@ -129,5 +128,16 @@ button{
 
 }
 
+#mode-button{
+
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    border-radius: 10%;
+    text-align: center;
+    color: white;
+    background-color: black;
+
+}
 
 

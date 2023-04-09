@@ -23,12 +23,22 @@ let com_point = 0;
 
 const resetBtn = document.getElementById('reset-button');
 
+const modeBtn = document.getElementById('mode-button');
+const border = document.querySelectorAll("#content-wrapper,#button,#reset-button");
+const btnBack = document.querySelectorAll("#reset-button,#mode-button");
+let mode_text = '다크모드';
+console.log(border.constructor.name);
+
+
+const body = document.querySelector('body');
 
 rockBtn.addEventListener('click',displayMyChoice);
 scissorsBtn.addEventListener('click',displayMyChoice);
 paperBtn.addEventListener('click',displayMyChoice);
 
 resetBtn.addEventListener('click',resetScore);
+
+modeBtn.addEventListener('click',changeMode);
 
 function displayMyChoice(e){
 
@@ -86,6 +96,46 @@ function changeScore(){
     myPointText.innerText = my_point;
     comPointText.innerText = com_point;
 
+}
+
+function changeMode(){
+    if(mode_text=='다크모드'){
+        mode_text='라이트모드';
+        modeBtn.innerText=mode_text;
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+        
+        for (i = 0; i < border.length; i++) {
+            const item = border.item(i);
+            item.style.borderColor= "white"
+        }
+
+        for(i =0; i<btnBack.length;i++){
+            const item = btnBack.item(i);
+            item.style.color = "black";
+            item.style.backgroundColor = "white";
+        }
+
+
+    } else{
+
+        mode_text='다크모드';
+        modeBtn.innerText=mode_text;
+        body.style.backgroundColor = "white";
+        body.style.color = "black";
+        
+        for (i = 0; i < border.length; i++) {
+            const item = border.item(i);
+            item.style.borderColor= "black"
+        }
+
+        for(i =0; i<btnBack.length;i++){
+            const item = btnBack.item(i);
+            item.style.color = "white";
+            item.style.backgroundColor = "black";
+        }
+
+    }
 }
 
 function startGame(myChoice){
