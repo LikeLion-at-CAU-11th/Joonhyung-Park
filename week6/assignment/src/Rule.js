@@ -1,30 +1,47 @@
+import Game from "./Game.js"
+
 
 class Rule{
 
     constructor(){
-        this.carlist = [];
+        this.carlist = null;
+        this.curresult = [];
         this.range = 0;
-        console.log("1");
     }
 
-    set Carlist(cars){
 
-        carlist = cars.value.includes(',');
-        
-        carlist.forEaxh((car)=>{
-            if(5>car>0){
-                console.log("true");          
-            }
-            else{
-                console.log("error");
-            }
-        })
+    Carlist(){
 
+        var cars = this.carlist.split(',');
+        let result = cars.some((car)=>{
+            if(car.length>5||car==''){
+                return 1;
+            }
+        });
+
+        if(result == 1){
+            alert("자동차의 입력이 잘못되었습니다. ");
+            this.curresult = [];
+        }
+        else{
+            this.curresult = cars;
+            if(this.range>0){
+                new Game(this.curresult,this.range);
+            }
+        }
+    
     }
 
-    set Range(gameNum){
-        range = gameNum;
-        console.log(range);
+    Range(){
+        if(this.range<=0){
+            alert("횟수의 입력이 잘못 되었습니다. "); 
+            this.range = 0;
+        }
+        else{
+            if(this.curresult.length!=0){
+                new Game(this.curresult,this.range);
+            }
+        }
 
     }
 
