@@ -65,5 +65,5 @@ async function getData(){
 async function showDetails(time, keyword, photographer) {
     // 새로운 페이지로 이동하면서 상세 정보를 보여줍니다.
     const url = `Detail.html?time=${time}&keyword=${keyword}&photographer=${photographer}`;
-    window.location.href = url;
-  }
+    window.open(url);
+}
