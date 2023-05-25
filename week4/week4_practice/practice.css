@@ -50,6 +50,7 @@ body {
     
     flex-basis: 73%;
     width: 95%;
+
     display: flex;
     justify-content: space-between;
 
@@ -59,7 +60,9 @@ body {
 .recent-article{
 
     flex-basis: 47%;
+    
     display: flex;
+    
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: space-between;    
