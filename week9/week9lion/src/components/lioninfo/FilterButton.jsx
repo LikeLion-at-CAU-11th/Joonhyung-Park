@@ -9,7 +9,7 @@ export const FilterButton = ({title,type,setUserData,clickFilter,setCilckedFilte
         if(type==="page"){
             //page api 호출
             const response = await getUserPerPage(0)
-            console.log(response.data.data)
+            console.log(response)
             setUserData(response.data.data)
             setCilckedFilter(title)
         }

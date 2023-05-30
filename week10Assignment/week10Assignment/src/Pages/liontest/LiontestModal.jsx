@@ -1,21 +1,24 @@
-import React, {useState,useRef} from 'react'
+import React, {useState,useRef}  from 'react'
+import { Outlet, useSearchParams } from 'react-router-dom';
 import styled from 'styled-components';
 import QuestionSection from './QuestionSection';
 import Result from './Result';
 
-
-export const LionTestModal = () => {
+const LiontestModal = () => {
 
   const [content, setContent] = useState(1)
   const results = useRef(null); // useRef를 사용하여 results를 관리
+  
+  const [searchParams, setSearchParams] = useSearchParams();
 
   const handleStartBtn = () =>{
   
     setContent(2)
-    
+    searchParams.set('problem',1);
+    setSearchParams(searchParams);
+
   }
 
-  
   const handleEndBtn = () =>{
     console.log(results.current);
     setContent(4)
@@ -24,22 +27,20 @@ export const LionTestModal = () => {
 
   return (
     <Dom>
-
+      <Outlet/>
       <Title>멋사인 테스트</Title>
-    
       <ContentBox>
+        {content === 1 && <Button onClick={handleStartBtn}>시작하기</Button>}
+        {content === 2 && <QuestionSection results={results} content={2} setContent={setContent} setSearchParams={setSearchParams} searchParams={searchParams}/>}
+        {content ===3 && <Button onClick={handleEndBtn}>결과보기</Button>}
+        {content === 4 && <Result results={results.current} />}
 
-      {content === 1 && <Button onClick={handleStartBtn}>시작하기</Button>}
-      {content === 2 && <QuestionSection results={results} content={2} setContent={setContent}/>}
-      {content ===3 && <Button onClick={handleEndBtn}>결과보기</Button>}
-      {content === 4 && <Result results={results.current} />}
-
-    </ContentBox>
-
-    
+      </ContentBox>
     </Dom>
   )
 }
+
+export default LiontestModal
 
 const Title = styled.div`
   font-size: 40px;

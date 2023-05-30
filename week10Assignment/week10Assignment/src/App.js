@@ -2,25 +2,28 @@ import React,{useState} from 'react'
 import { Route,Routes } from 'react-router-dom';
 import styled from 'styled-components';
 import { Home } from './Pages/Home';
+import LionInfoModal from './Pages/lioninfo/LionInfoModal';
+import LiontestModal from './Pages/liontest/LiontestModal';
 
 function App() {
 
+
   return (
     <div>
-
-    <Routes>
       <AppDom>
-        <Route path='/' element={<Home/>}>
-
-        </Route>
+        <Routes>
+          <Route path='/' element={<Home/>}>
+            <Route path='info' element={<LionInfoModal/>} />
+            <Route path='test' element={<LiontestModal/>} />
+          </Route>
+        </Routes>
       </AppDom>
-    </Routes>
-
     </div>
   );
 }
 
 export default App;
+
 
 
 const AppDom = styled.div`

@@ -16,8 +16,8 @@ function App() {
         <Route path='/:username' element={<Profile/>}></Route>
         <Route path='/books' element={<Books/>}>
           {/* 하위 컴포넌트라 / 없이 적어야 오류 없이 작동됨 */}
-          <Route path=':id' element={<Book/>}></Route>
-        </Route>
+        <Route path=':id' element={<Book/>}></Route>
+      </Route>
 
       </Routes>
     </div>

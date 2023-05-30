@@ -1,21 +1,35 @@
 import React,{useState} from 'react'
+import { Link, Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Home = () => {
-    const [modal,setModal] = useState(0);
+  const [modal,setModal] = useState(0);
 
     return (
     <div>
-        
-        <MenuDom>
-          <MenuButton clicked={modal===0} onClick={()=>setModal(0)}>아기사자 정보</MenuButton>
-          <MenuButton clicked={modal===1} onClick={()=>setModal(1)}> 멋사인 테스트</MenuButton>
-        </MenuDom>
 
+        <MenuDom>
+          
+          <StyledLink to='/info' clicked={modal===0} onClick={()=>setModal(0)}>
+            <MenuButton>아기사자 정보</MenuButton>
+          </StyledLink>
+          <StyledLink to='/test' clicked={modal===0} onClick={()=>setModal(0)}>
+            <MenuButton> 멋사인 테스트</MenuButton>
+          </StyledLink>
+
+        </MenuDom>
+          
+        <Outlet/>
+
+   
     </div>
   )
 }
 
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 
 const AppDom = styled.div`
   display: flex;
@@ -39,7 +53,10 @@ const MenuButton = styled.div`
   cursor: pointer;
 `;
 
+
+
 const MenuDom = styled.div`
+
   display: flex;
   gap: 20px;
   margin: 20px;

@@ -12,11 +12,15 @@ export const postQuizResult = async (data) => {
     const url = baseUrl + `/liontest/result`;
   
     const requestData = {
-      answer: data.map((item) => ({ id: item.id, answer: item.answer })),
+      answer: data.map((item,i) => 
+        ({ id: i, answer: item })
+      ),
+    
     };
   
     try {
-      console.log(requestData)
+      console.log(requestData);
+
       const response = await axios.post(url, requestData);
       console.log(response.data);
       return response.data;
