@@ -9,7 +9,7 @@ const Result = (results) => {
     return (
     <Dom>
 
-        <Total>{results.results.result}/8</Total>
+        <Total>{results.results.result}/9</Total>
 
         <Incorrect>틀린 문제</Incorrect>
 

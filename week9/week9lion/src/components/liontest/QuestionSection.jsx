@@ -36,7 +36,7 @@ const QuestionSection = ({results,content,setContent}) => {
     const handleClickNext = () => {
 
         if(answersheet.length===8){
-            
+            addToAnswerSheet(i,answer);
             postQuizResult(answersheet)
             .then((response) => {
               const data = response.data; // 결과 데이터
