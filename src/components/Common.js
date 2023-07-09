@@ -23,7 +23,9 @@ export const Title = styled.div`
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 30px;
-`;
+  margin-Top: 30px;
+
+  `;
 
 export const Input = styled.input`
   font-size: 20px;
