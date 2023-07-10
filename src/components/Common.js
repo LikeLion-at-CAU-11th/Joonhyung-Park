@@ -20,7 +20,7 @@ export const Form = styled.div`
 `;
 
 export const Title = styled.div`
-  font-size: 30px;
+  font-size: 30px; d
   font-weight: 700;
   margin-bottom: 30px;
   margin-Top: 30px;
