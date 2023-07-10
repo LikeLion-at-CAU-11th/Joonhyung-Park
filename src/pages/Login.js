@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import { Wrapper,Input,Inputs,Form,Title } from '../components/Common'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Signin } from '../apis/signin';
 
 const Login = () => {
   
+    const router = useNavigate();
+
     const [ID,setID] = useState('');
     const [Password,setPassword] = useState('');
     
@@ -21,7 +23,17 @@ const Login = () => {
 
 
         const result = await Signin(ID,Password);
-        console.log(result);
+
+        const {accessToken,refreshToken} = result;
+
+        localStorage.setItem('access',accessToken);
+        localStorage.setItem('refresh',refreshToken);
+        
+        console.log(accessToken);
+        console.log(refreshToken);
+
+
+        router("/mypage");
 
 
     }
