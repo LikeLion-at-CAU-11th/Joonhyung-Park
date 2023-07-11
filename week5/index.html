@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위 바위 보</title>
+    <link href="style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <!-- //주먹(rock)
+	<i id="button" class="fa-regular fa-hand-back-fist"></i>
+	
+	//가위(scissors)
+	<i id="button" class="fa-regular fa-hand-scissors fa-rotate-90"></i>
+	
+	//보자기(paper)
+	<i id="button" class="fa-regular fa-hand"></i> -->
+	
+
+    <div id="header_wrapper" class= "row">
+        <div>rock scissors paper</div>
+
+        <button><i id="reset-button" class="fa-solid fa-arrow-rotate-left"></i></button>
+
+    </div>
+
+
+    <div id="content-wrapper" class="column">
+
+        <section class ="score-section row">
+
+            <div class="my-socre">
+                <div id="my_score">0</div>
+            </div>
+
+            <div class ="score">
+                score
+            </div>
+
+            <div class="computer-score">
+                <div id = "com_score">0</div>
+            </div>
+
+        </section>
+        <section class = "display-section row">
+
+        <div class="display-main">
+            <div class="display-title">
+                Me
+            </div>
+            <div class="icon-container">
+                <i id="my-hand-icon"  class="fa-regular fa-hand-back-fist"></i>
+            </div>
+            <div id="my-hand-text">
+                rock
+            </div>
+        </div>   
+        <div id="display-result">result</div>   
+        <div class="display-main">
+            
+            <div class="display-title">
+                Computer
+            </div>
+            <div class="icon-container">
+                <i id="computer-hand-icon" class="fa-regular fa-hand-back-fist"></i>
+            </div>
+
+            <!-- 같은 class에 다른 id를 추가하여 수정 가능 ?  -->
+            
+            <div id="computer-hand-text" >
+                rock
+            </div>  
+
+
+        </div>   
+        
+        
+        </section>
+        <section class = "button-section row">
+
+            <div id="rock">	
+                <i id="button" class="fa-regular fa-hand-back-fist"></i>
+            </div>
+            <div id="scissors">	
+                <i id="button" class="fa-regular fa-hand-scissors fa-rotate-90"></i>
+            </div>
+            <div id="paper">	
+                <i id="button" class="fa-regular fa-hand"></i>
+            </div>
+
+        </section>
+        <section  class = "button-section row">
+
+            <button id="mode-button"> 다크모드 </button>
+
+        </section>
+
+
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://kit.fontawesome.com/001200a43b.js" crossorigin="anonymous"></script>
+</body>
+</html>

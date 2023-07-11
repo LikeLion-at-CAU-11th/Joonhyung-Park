@@ -1,0 +1,129 @@
+html,
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+
+.container{
+    
+    display : flex;
+    height: 140vj;
+    flex-direction: column;
+    background-color: beige;
+    width: 90vw;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+
+
+.nav {
+    
+    flex-basis: 25%;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between; 
+}
+
+.title{
+
+    flex-basis: 100%;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.article{
+    
+    flex-basis: 73%;
+    width: 95%;
+
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.recent-article{
+
+    flex-basis: 47%;
+    
+    display: flex;
+    
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;    
+
+}
+
+.recent{
+
+    flex-basis: 47%;
+    height: 47%;
+    background-color: antiquewhite;
+    /* item to container for text aligin */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.popular-article{
+
+    flex-basis: 47%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: space-between;    
+
+}
+
+.popular {
+    flex-basis: 47%;
+    height: 47%;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+/* 아래와 같이 하면, popular가 가지는 값을 popular wide 역시 동일하게 가질 수 있음 */
+.popular.wide{
+
+    flex-basis: 100%;
+
+}
+
+@media all and (max-width:800px){
+    .nav{
+        width: 60%;
+    }
+}
+
+
+@media all and (max-width:600px){
+    .nav{
+        width:75%;
+    }
+}
+
+@media all and (max-width:400px){
+    .nav{
+        width: 99%;
+    }
+}
+
