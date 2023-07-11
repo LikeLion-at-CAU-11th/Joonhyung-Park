@@ -1,11 +1,12 @@
+
 import axios from "axios";
-import { getMypage } from "./mypage";
-import { useNavigate } from "react-router-dom";
+
 
 
 export const refresh = async() => {
 
     
+    try{
 
         const accessToken=localStorage.getItem('access');
         const refreshToken=localStorage.getItem('refresh');
@@ -21,8 +22,15 @@ export const refresh = async() => {
         });
 
         
-        console.log(result.data);
         return result.data;
+    }catch (error){
 
+        // 이거 왜 안됨 ? = > 찾아보기 
+        // useNavigate('/');
+        
+        return null
+        // window.location.replace('/');
+        // console.log(error);
+    }
 
 }

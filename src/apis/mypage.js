@@ -3,6 +3,7 @@ import { refresh } from "./refresh";
 
 
 export const getMypage = async() => {
+    const controller = new AbortController();
     const token = localStorage.getItem('access');
 
     try{
@@ -12,30 +13,29 @@ export const getMypage = async() => {
             },
             }
         )
-
-
-        // const {accessToken, refreshToken}= await refresh();
-        // console.log(accessToken);
-        // console.log(refreshToken);
-
-        // localStorage.setItem('access',accessToken);
-        // localStorage.setItem('refresh',refreshToken);
         
         return result;
     } catch (error){
     
         if(error.response.status===401){
-            const {accessToken, refreshToken}= await refresh();
+            
+            const result= await refresh();
 
+            if(result===null){
+                // controller.abort();
+                window.location.replace("/");
+            }
+            else{
+                const {accessToken,refreshToken} = result;
+                //아니 근데 만약에 error의 형태로 되면, 위치를 바꾸더라도 여기는 돌아가는거 아님 ? 그럼 어차피 오류 나는거 아닌가?
+                error.config.headers.Authorization = accessToken;
 
-            error.config.headers.Authorization = accessToken;
+                localStorage.setItem('access',accessToken);
+                localStorage.setItem('refresh',refreshToken);
 
-            localStorage.setItem('access',accessToken);
-            localStorage.setItem('refresh',refreshToken);
-
-            return (await axios.get(error.config.url, error.config));
+                return (await axios.get(error.config.url, error.config));
+            }
         }
     }
-
 
 }
