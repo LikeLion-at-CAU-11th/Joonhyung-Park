@@ -24,6 +24,8 @@ const Login = () => {
 
         const result = await Signin(ID,Password);
 
+        if(result!==null){
+
         const {accessToken,refreshToken} = result;
 
         localStorage.setItem('access',accessToken);
@@ -35,7 +37,7 @@ const Login = () => {
 
         router("/mypage");
 
-
+        }
     }
 
     return (

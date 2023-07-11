@@ -23,9 +23,12 @@ export const getMypage = async() => {
 
             if(result===null){
                 // controller.abort();
+                alert("토큰이 만료 되어 로그아웃 됩니다.");
                 window.location.replace("/");
+            
             }
             else{
+
                 const {accessToken,refreshToken} = result;
                 //아니 근데 만약에 error의 형태로 되면, 위치를 바꾸더라도 여기는 돌아가는거 아님 ? 그럼 어차피 오류 나는거 아닌가?
                 error.config.headers.Authorization = accessToken;

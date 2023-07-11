@@ -3,6 +3,8 @@ import axios from "axios";
 
 export const Signin=async (id,pw) =>{
 
+    
+
     try{
         
         const result = await axios.post('http://front.cau-likelion.org/',{
@@ -13,11 +15,15 @@ export const Signin=async (id,pw) =>{
     }
     catch(err){
         if (err.response.status === 401) {
-            console.log("비밀번호 틀림");
-          } else if (err.response.status === 500) {
-            console.log("아이디 혹은 비밀번호가 틀림");
+            alert("비밀번호가 맞지 않습니다.");
 
-          }
+        } else if (err.response.status === 500) {
+            alert("아이디 혹은 비밀번호가 맞지 않습니다.");
+        }
+        
+        return null;
+
+
     }
 
 
