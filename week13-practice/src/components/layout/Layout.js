@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { styled } from 'styled-components'
 import { Button } from './common'
 import {ThemeContext} from '../../context/Context'
+
 //모든 페이지에서 동일하게 적용할 부분에 경우 ,Layout 컴포넌트에서 함 
 import { isSubmittedAtom,userNameAtom,emailAtom } from '../../recoil/atoms'
 import { useRecoilValue, useResetRecoilState } from 'recoil'
@@ -32,7 +33,6 @@ const Layout = ({children}) => {
     const isSubmited = useRecoilValue(isSubmittedAtom);
 
     return (
-    
 
     <ThemeContext.Provider value={mode}>
         <Wrapper>
@@ -45,7 +45,7 @@ const Layout = ({children}) => {
             <div>{children}</div>
             <Footer mode={mode.main}>
                 {
-                !isSubmited? '':`${userName}의 공간 || 이메일 주소${email}`
+                !isSubmited? '':`${userName}의 공간 || 이메일 주소 ${email}`
                 }
             </Footer>
         </Wrapper>

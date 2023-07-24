@@ -2,13 +2,14 @@ import React, { useContext } from 'react'
 import { ThemeContext } from '../context/Context'
 import { Button,Title, Wrapper } from '../components/layout/common'
 
-import { userNameAtom, emailAtom,isSubmittedAtom } from '../recoil/atoms'
+import { userNameAtom, emailAtom,isSubmittedAtom, passwordAtom } from '../recoil/atoms'
 import { useRecoilValue, useResetRecoilState } from 'recoil'
 import { useNavigate } from 'react-router-dom'
 
 
 const Mypage = () => {
-    const mode = useContext(ThemeContext)
+
+  const mode = useContext(ThemeContext)
 
     //reset 하면 default 값으로 바뀌게 됨
     const resetName=useResetRecoilState(userNameAtom);
@@ -16,15 +17,26 @@ const Mypage = () => {
     const reset = useResetRecoilState(isSubmittedAtom);
 
     const userName = useRecoilValue(userNameAtom);
+    const password = useRecoilValue(passwordAtom)
 
     const navigate= useNavigate();
 
     const handleDelete=()=>{
+
+      console.log(password)
+      if(password===null){
+
+      
       reset();
       resetEmail();
       resetName();
-
       navigate('/');
+
+      }
+
+      
+
+
     }
 
     return (

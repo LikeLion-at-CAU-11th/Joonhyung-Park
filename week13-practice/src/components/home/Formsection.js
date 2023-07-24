@@ -23,6 +23,8 @@ const Formsection = () => {
     <>
         <Form type='text' inputType='이름'></Form>
         <Form type='email' inputType='이메일'></Form>
+        <Form type='pw' inputType='비밀번호'></Form>
+
         <Button mode={mode.main} onClick={handleClick}>버튼</Button>
     </>
     )
