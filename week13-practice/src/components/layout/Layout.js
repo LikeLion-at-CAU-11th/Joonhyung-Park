@@ -75,7 +75,6 @@ height: 100px;
 width: 100%;
 justify-content: center;
 align-items: center;
-
 background-color: ${props=>props.mode};
 `
 
