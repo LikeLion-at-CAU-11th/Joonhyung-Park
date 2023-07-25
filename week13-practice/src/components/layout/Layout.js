@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import { styled } from 'styled-components'
-import { Button, ColorButton } from './common'
 import {ThemeContext} from '../../context/Context'
 
 //모든 페이지에서 동일하게 적용할 부분에 경우 ,Layout 컴포넌트에서 함 
@@ -10,7 +9,7 @@ import { useRecoilValue, useResetRecoilState } from 'recoil'
 const Layout = ({children}) => {
     
     const context = useContext(ThemeContext);
-    const [active, setActive] = useState(0);
+    const [active, setActive] = useState('0');
 
     const [mode,setMode] = useState(context.blueTheme)
 
@@ -19,16 +18,15 @@ const Layout = ({children}) => {
         const color = e.target.value;
         if(color==='blue'){
             setMode(context.blueTheme);
-            setActive(0);
+            setActive('0');
         }
         else if(color==='green'){
             setMode(context.greenTheme);
-            setActive(1);
-
+            setActive('1');
         }
         else{
             setMode(context.pinkTheme);
-            setActive(2);
+            setActive('2');
         }
 
     }
@@ -42,9 +40,9 @@ const Layout = ({children}) => {
     <ThemeContext.Provider value={mode}>
         <Wrapper>
             <Header mode={mode.main}>
-                <ColorButton value='blue' active={active===0} onClick={handleClick}>Blue</ColorButton>
-                <ColorButton value='green' active={active===1} onClick={handleClick}>Green</ColorButton>
-                <ColorButton value='pink' active={active===2} onClick={handleClick}>Pink</ColorButton>
+                <ColorButton value='blue' $active={active==='0'} onClick={handleClick}>Blue</ColorButton>
+                <ColorButton value='green' $active={active==='1'} onClick={handleClick}>Green</ColorButton>
+                <ColorButton value='pink' $active={active==='2'} onClick={handleClick}>Pink</ColorButton>
 
             </Header>
             <div>{children}</div>
@@ -84,6 +82,7 @@ background-color: ${props=>props.mode};
 
 `
 
+
 const Footer = styled.div`
 display: flex;
 height: 50px;
@@ -93,3 +92,20 @@ align-items: center;
 color : white;
 background-color: ${props=>props.mode};
 `
+
+export const ColorButton = styled.button`
+all: unset;
+background-color: ${props=>props.mode};
+color : white;
+padding: 10px;
+border-radius: 24px;
+transition: 0.2s;
+font-size : 100%;
+
+&:hover {
+    transform: scale(1.5,1.5);
+
+  }
+${props=>props.$active ? `font-size : 150%;` : 'font-size : 100%'}
+
+`;
