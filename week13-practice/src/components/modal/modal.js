@@ -23,7 +23,7 @@ export const Modal = ({handleModalClick,setIsModalOpen}) => {
         <Title>{`정보 기입 사항`}</Title>
         <Title>{`이름 : ${name}`}</Title>
         <Title>{`이메일 : ${email}`}</Title>
-        <Title>{`비밀번호 :${pw}`}</Title>
+        {   <Title>{`비밀번호 :${pw}`}</Title> }
         <ButtonDiv>
             <Button style={{margin:'0 5px'}}mode={mode.main} onClick={handleModalClick} >확인</Button>
             <Button mode={mode.main} onClick={closeModal} >취소</Button>

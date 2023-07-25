@@ -34,8 +34,8 @@ const Formsection = () => {
         {isModalOpen ? <Modal handleModalClick={handleClick} setIsModalOpen={setIsModalOpen}/> : null}
 
         <Form type='text' inputType='이름'></Form>
-        <Form type='email' inputType='이메일'></Form>
-        <Form type='pw' inputType='비밀번호'></Form>
+        <Form type='email' inputType='이메일'></Form>  
+        <Form type='password' inputType='비밀번호'></Form>
 
         <Button mode={mode.main} onClick={handleModal} >버튼</Button>
 
