@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import { styled } from 'styled-components'
-import { Button } from './common'
 import {ThemeContext} from '../../context/Context'
+
 //모든 페이지에서 동일하게 적용할 부분에 경우 ,Layout 컴포넌트에서 함 
 import { isSubmittedAtom,userNameAtom,emailAtom } from '../../recoil/atoms'
 import { useRecoilValue, useResetRecoilState } from 'recoil'
@@ -9,6 +9,7 @@ import { useRecoilValue, useResetRecoilState } from 'recoil'
 const Layout = ({children}) => {
     
     const context = useContext(ThemeContext);
+    const [active, setActive] = useState('0');
 
     const [mode,setMode] = useState(context.blueTheme)
 
@@ -17,12 +18,15 @@ const Layout = ({children}) => {
         const color = e.target.value;
         if(color==='blue'){
             setMode(context.blueTheme);
+            setActive('0');
         }
         else if(color==='green'){
             setMode(context.greenTheme);
+            setActive('1');
         }
         else{
             setMode(context.pinkTheme);
+            setActive('2');
         }
 
     }
@@ -32,20 +36,19 @@ const Layout = ({children}) => {
     const isSubmited = useRecoilValue(isSubmittedAtom);
 
     return (
-    
 
     <ThemeContext.Provider value={mode}>
         <Wrapper>
             <Header mode={mode.main}>
-                <Button value='blue' onClick={handleClick}>Blue</Button>
-                <Button value='green' onClick={handleClick}>Green</Button>
-                <Button value='pink' onClick={handleClick}>Pink</Button>
+                <ColorButton value='blue' $active={active==='0'} onClick={handleClick}>Blue</ColorButton>
+                <ColorButton value='green' $active={active==='1'} onClick={handleClick}>Green</ColorButton>
+                <ColorButton value='pink' $active={active==='2'} onClick={handleClick}>Pink</ColorButton>
 
             </Header>
             <div>{children}</div>
             <Footer mode={mode.main}>
                 {
-                !isSubmited? '':`${userName}의 공간 || 이메일 주소${email}`
+                !isSubmited? '':`${userName}의 공간 || 이메일 주소 ${email}`
                 }
             </Footer>
         </Wrapper>
@@ -75,9 +78,10 @@ height: 100px;
 width: 100%;
 justify-content: center;
 align-items: center;
-
 background-color: ${props=>props.mode};
+
 `
+
 
 const Footer = styled.div`
 display: flex;
@@ -88,3 +92,20 @@ align-items: center;
 color : white;
 background-color: ${props=>props.mode};
 `
+
+export const ColorButton = styled.button`
+all: unset;
+background-color: ${props=>props.mode};
+color : white;
+padding: 10px;
+border-radius: 24px;
+transition: 0.2s;
+font-size : 100%;
+
+&:hover {
+    transform: scale(1.5,1.5);
+
+  }
+${props=>props.$active ? `font-size : 150%;` : 'font-size : 100%'}
+
+`;
