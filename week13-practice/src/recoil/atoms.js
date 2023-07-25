@@ -18,5 +18,5 @@ export const isSubmittedAtom = atom({
 
 export const passwordAtom = atom({
     key : 'password',
-    default : null,
+    default : "",
 })

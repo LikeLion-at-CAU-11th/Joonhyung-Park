@@ -22,7 +22,7 @@ const Mypage = () => {
     const userName = useRecoilValue(userNameAtom);
     const password = useRecoilValue(passwordAtom)
 
-    const[pw,setPw] = useState(null);
+    const[pw,setPw] = useState("");
     const navigate= useNavigate();
 
 
