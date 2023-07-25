@@ -31,7 +31,7 @@ const Formsection = () => {
   return (
     <>
         
-        {isModalOpen ? <Modal handleModalClick={handleClick}/> : null}
+        {isModalOpen ? <Modal handleModalClick={handleClick} setIsModalOpen={setIsModalOpen}/> : null}
 
         <Form type='text' inputType='이름'></Form>
         <Form type='email' inputType='이메일'></Form>
