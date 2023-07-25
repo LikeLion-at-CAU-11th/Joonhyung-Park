@@ -18,6 +18,7 @@ const Mypage = () => {
     const resetName=useResetRecoilState(userNameAtom);
     const resetEmail = useResetRecoilState(emailAtom);
     const reset = useResetRecoilState(isSubmittedAtom);
+    const resetPassword = useResetRecoilState(passwordAtom);
 
     const userName = useRecoilValue(userNameAtom);
     const password = useRecoilValue(passwordAtom)
@@ -41,7 +42,9 @@ const Mypage = () => {
       reset();
       resetEmail();
       resetName();
+      resetPassword();
       navigate('/');
+
 
       }
 
